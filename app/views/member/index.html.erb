@@ -1,2 +1,35 @@
-<h1>Member#index</h1>
-<p>Find me in app/views/member/index.html.erb</p>
+
+<div id="main_content">
+  <%= render :partial => "mobile_photo_title" %>
+
+  <div>
+    酷购推荐.促销方案
+  </div>
+
+  <div>
+    配件.维修
+  </div>
+
+  <div>
+    为何通过酷购直供
+  </div>
+
+  <div>
+    图片快速展示台
+  </div>
+</div>
+
+
+<% content_for :right do %>
+  <div>购物车</div>
+  <div>
+    推广活动（整合购买）
+  </div>
+  <div>
+    新品
+  </div>
+  <div>
+    热销产品
+  </div>
+<% end %>
+
