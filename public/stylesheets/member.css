@@ -7,11 +7,27 @@
 */
 
 body {line-height:1.5;}
+.main {min-height: 100%;border:solid 1px red;}
+.container {margin: auto; width:90%; padding:8px; background-color:#9ac2a0;order:solid 1px green;}
+.header {padding-bottom:16px;}
+.logo {padding-bottom: 16px; height:100px; border:solid 1px red;float:left;}
+
+.banner {float:left;border:solid 1px blue;}
+.menu {clear:both;background-color:#B4e189;height:38px;font-size:100%;}
+.menu_left {background-color:#701640;padding-left:20px;padding-right:20px;margin-right:20px;float:left;width:100px;height:100%;font-size:110%;font-weight:bold;color:white;}
+.search {clear:both;padding-left:20px;background-color:#b2cda6;height:32px;padding-top:6px;}
+.text_padding {padding-top:4px;}
+.content {}
 
 
-
-
-
+.left-zone {width:180px; padding-right: 10px;}
+.right-zone {width:180px; padding-left: 10px;}
+.block1 {margin-bottom:10px;background-color:#999999;text-align:center; padding-top:10px;padding-bottom:10px;  border:solid 1px green;}
+.block1 h2 {margin:0;padding:0; font-size:120%; font-weight:bold;}
+.block2 {margin-bottom:10px;border:solid 3px #216572; padding:6px; background-color: #c7f0fc;}
+.block2 p {text-align:right;font-size:80%;margin:0;padding:20px 20px 0 0;}
+.block3 {border:solid 1px gray;padding:6px;}
+.cart_block {background-color:#eee;border:solid 1px black;}
 
 #main_body {padding:40px 10px 10px 10px; margin:auto;}
 #div_message {padding:2px;margin:4px;clear:both;display:block;height:26px;}
@@ -50,8 +66,6 @@ body {line-height:1.5;}
 .mobile_title_zone .content .description h2 {font-size: 100%; font-weight:bold;}
 
 .clear {clear:both;}
-
-<div class="clear"></div>
 
 .data_table_container {font: normal 11px auto "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;color: #4f6b72;background: #E6EAE9; padding:8px;}
 .data_table {padding: 0;margin: 0;}

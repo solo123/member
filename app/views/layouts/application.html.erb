@@ -17,18 +17,27 @@
     <div class="container">
       <div class="header">
         <div class="logo">
-          {logo}
+          <img src="images/main/coolpur_logo.gif" alt="CoolPur" />
         </div>
 
         <div class="banner">
           banner or stats here.
         </div>
 
-        <div class="menu">
-          主菜单(首页｜我的酷购|客户服务|搜索)
+        <div class="menu ui-corner-top">
+          <div class="menu_left ui-corner-tl">
+            <div class="text_padding">
+              <a href="#">主菜单</a> 
+            </div>
+          </div>
+          <div class="text_padding">          
+          <a href="#">我的酷购</a> |
+          <a href="#">客户服务</a>
+        </div>
         </div>
 
-        <div class="search">
+        <div class="search ui-corner-bottom">
+          <input type="text" size="30" /> 
           search box
         </div>
       </div>
@@ -36,15 +45,15 @@
       <div class="content">
         <table width="100%">
           <tr>
-            <td>
+            <td valign="top" class="left-zone">
               <!-- left zone -->
-              <%= render :partial => "left_menu" %> 
+              <%= render :partial => "member/left_menu" %> 
             </td>
-            <td>
+            <td valign="top">
               <!-- middle zone -->
               <%= yield %>
             </td>
-            <td>
+            <td valign="top" class="right-zone">
               <!-- right zone -->
               <%= yield :right  %>
             </td>
