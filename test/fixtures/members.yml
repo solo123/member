@@ -1,0 +1,17 @@
+--- 
+members_001: 
+  company: coolpur
+  name: !binary |
+    5qKB55Sf
+
+  qq: "41787"
+  created_at: 2009-12-09 10:11:43
+  last_login: 2009-12-09 10:10:00
+  updated_at: 2009-12-09 10:11:43
+  level: "1"
+  id: "1"
+  mobile: "13728770073"
+  phone: "83498300"
+  status: "0"
+  email: jimmy@coolpur.com
+  pin: "333"

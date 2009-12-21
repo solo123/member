@@ -4,4 +4,9 @@ Shop's Member System
 
 == Getting Started
 
-1. for empty project...
+1. for test fixtures
+   1) modify lib/tasks/fixtures.rake
+   2) rake db:fixtures:dump_fixture 
+   3) check test/fixtures/...yml
+
+2.
