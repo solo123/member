@@ -1,7 +1,5 @@
-<% if session[:member_id]? %>
+<% if session[:member_id] %>
 alert('Login success');
 <% else %>
-alert('Login failure! \n\n');
+  alert('Login failure! \n\n<%= escape_javascript(flash.delete(:alert))  %>');
 <% end %>
-
-

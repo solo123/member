@@ -1,9 +1,7 @@
 --- 
 members_001: 
   company: coolpur
-  name: !binary |
-    5qKB55Sf
-
+  name: "梁益华"
   qq: "41787"
   created_at: 2009-12-09 10:11:43
   last_login: 2009-12-09 10:10:00

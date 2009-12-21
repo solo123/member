@@ -8,5 +8,6 @@ Shop's Member System
    1) modify lib/tasks/fixtures.rake
    2) rake db:fixtures:dump_fixture 
    3) check test/fixtures/...yml
+   4) ruby -I test test/unit/..._test.rb
 
 2.

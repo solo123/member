@@ -1,3 +1,9 @@
+#
+# Generate test fixtures from db
+#
+# Create by Jimmy, 2009.12.21
+#
+
 namespace :db do
   namespace :fixtures do
 

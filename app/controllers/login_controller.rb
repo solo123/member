@@ -10,6 +10,7 @@ class LoginController < ApplicationController
       end
     end
     respond_to do |format|
+      format.html { redirect_to :controller => 'member', :action => 'index'  }
       format.js
     end
   end
