@@ -20,6 +20,8 @@ class MemberController < ApplicationController
   end
 
   def logout
+    session[:member_id] = nil
+    redirect_to :controller => 'member'
   end
 
 end

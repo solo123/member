@@ -3,7 +3,21 @@
   电话: 0755-83998300 
 
   <br />&nbsp;<br />
-  <a href="#">登录会员账户，<br />查询直供价格。</a>
+  <% if is_already_login? %>
+    会员:<%=h session[:member_id].to_s %><br />
+    <a href="member/logout">退出登录</a>
+  <% else %>
+    <a href="member/login">登录会员账户，<br />查询直供价格。</a>
+  <% end %>
+</div>
+
+<div class="block2 ui-corner-all">
+  <% 
+    brands = Brand.all(:limit => 50)
+    brands.each do |brand| %>
+      <a href='brand/<%= brand.id %>'><%=h brand.brand_name %></a>
+  <% end %>
+  <p><a href="#">全部品牌&gt;&gt;</a></p>
 </div>
 
 <div class="block2 ui-corner-all">
