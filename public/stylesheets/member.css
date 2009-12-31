@@ -7,18 +7,28 @@
 */
 
 body {line-height:1.5;}
-.main {min-height: 100%;border:solid 1px red;}
+.main  {}
+.top_links {font-size:80%; width:90%; padding-right:10px;text-align:right;margin:auto;}
 .container {margin: auto; width:90%; padding:8px; background-color:#9ac2a0;order:solid 1px green;}
 .header {padding-bottom:16px;}
-.logo {padding-bottom: 16px; height:100px; border:solid 1px red;float:left;}
+.logo {height:90px; vertical-align:middle; float:left;}
 
-.banner {float:left;border:solid 1px blue;}
+.banner {float:left;}
 .menu {clear:both;background-color:#B4e189;height:38px;font-size:100%;}
-.menu_left {background-color:#701640;padding-left:20px;padding-right:20px;margin-right:20px;float:left;width:100px;height:100%;font-size:110%;font-weight:bold;color:white;}
-.search {clear:both;padding-left:20px;background-color:#b2cda6;height:32px;padding-top:6px;}
+.menu_left {background-color:#701640;padding-left:20px;padding-right:20px;margin-right:20px;float:left;width:100px;height:100%;font-size:110%;font-weight:bold;color:white;text-align:center;font-family:Arial, Helvetica, sans-serif;}
 .text_padding {padding-top:4px;}
+.menu_left .text_padding a {color:white;font-weight:bold;text-decoration:none;text-align:center;}
+.menu_left .text_padding a.visited {color:white;text-decoration:none;text-align:center;}
 .content {}
 
+.search {clear:both;padding-left:20px;background-color:#b2cda6;height:32px;padding-top:6px;}
+#form_search input {font-size:100%;}
+#form_search {}
+#search_field {border:solid 1px #9ac2a0;font-size:100%;}
+#form_search .left {}
+
+.web_links {font-size:80%;}
+.page_foot {text-align:center;font-size:90%;color:#ddd;}
 
 .left-zone {width:180px; padding-right: 10px;}
 .right-zone {width:180px; padding-left: 10px;}
@@ -33,6 +43,11 @@ body {line-height:1.5;}
 #div_message {padding:2px;margin:4px;clear:both;display:block;height:26px;}
 
 #main_menu {}
+
+.contact {}
+.contact .user {float:left; border:solid 1px #ddd; padding:2px;}
+.contact .info {}
+.contact .info img {width:12px; height:12px;}
 
 
 /*
@@ -57,12 +72,13 @@ body {line-height:1.5;}
 
 .upcase_input {text-transform:uppercase;}
 
-.mobile_title_zone {border:solid 2px red; padding:4px;}
+.mobile_title_zone {padding:4px;border:solid 1px #ddd;}
 .mobile_title_zone .title {font-size:110%; font-weight:bold; }
 .mobile_title_zone .content {}
-.mobile_title_zone .content .item {border:solid 1px blue;float:left;}
-.mobile_title_zone .content .photo {width:102px; height:102px;border:solid 1px gray;}
-.mobile_title_zone .content .description {font-size: 85%;}
+.mobile_title_zone .content .item {border:solid 1px transparent;padding:4px;margin:1px;float:left;cursor:pointer;}
+.mobile_title_zone .content .item:hover {border:solid 1px red;background-color:lightYellow;}
+.mobile_title_zone .content .photo {float:left;}
+.mobile_title_zone .content .description {float:left;padding-left:6px;font-size: 85%;}
 .mobile_title_zone .content .description h2 {font-size: 100%; font-weight:bold;}
 
 .clear {clear:both;}
@@ -145,3 +161,39 @@ body {line-height:1.5;}
 #ajaxBusy {display:none;border:solid 1px #808080; border-width: 1px 0px; position:absolute;left:50%;top:50%; width:auto;}
 #ajaxBusy .header {background: #f2f2f2 url(../images/sprite.png) repeat-x 0px 0px; border-color: #808080 #808080 #ccc; border-style:solid; border-width:0px 1px 1px; padding:0px 10px; color:#000; font-size:9pt; font-weight:bold; line-height:1.9; font-family: arial,helvetica,clean,scans-serif;}
 #ajaxBusy .body {background-color:#f2f2f2;border-color:#808080;border-style:solid;border-width:0px 1px;padding:10px;}
+
+
+.div_brands {}
+.div_brands a.f {width:100px;height:30px;float:left;display:block;text-align:center;text-decoration:none;
+border-top:solid 1px #ddd;border-left:solid 1px #ddd; border-bottom:solid 1px #666; border-right:solid 1px #666;}
+.div_brands a.visited {text-decoration:none;}
+.div_brands a:hover {background-color:lightYellow;}
+div.clear {clear:both;}
+
+#notice {
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0 ;
+  font: bold smaller sans-serif;
+}
+.cart-title {
+  font: 120% bold;
+}
+.item-price, .total-line {
+  text-align: right;
+}
+.total-line .total-cell {
+  font-weight: bold;
+  border-top: 1px solid #595 ;
+}
+#cart, #cart table {
+  font-size: smaller;
+  color:       white;
+}
+#cart table {
+  border-top: 1px dotted #595 ;
+  border-bottom: 1px dotted #595 ;
+  margin-bottom: 10px;
+}
+

@@ -1,0 +1,20 @@
+
+<div class="mobile_title_zone ui-corner-all">
+  <div class="title">酷购推荐</div>
+  <div class="content">
+    <% @recommand_mobiles.each do |mobile|  %>
+      <div class="item" onclick="goto_mobile(<%= mobile.id %>)">
+      <div class="photo"><img height="100" src="images/mobiles/brands/TT/p1.jpg" /></div>
+      
+      <div class="description" >
+        <h2><%=h mobile.name %></h2>
+        市场价:<span class="deleted"><%= mobile.price%></span><br />
+        批发价: *
+      </div>
+    </div>
+    <% end %>
+    <div class="clear"></div>
+  </div>
+</div>
+
+

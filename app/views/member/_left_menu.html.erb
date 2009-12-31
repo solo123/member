@@ -12,44 +12,44 @@
 </div>
 
 <div class="block2 ui-corner-all">
-  <% 
-    brands = Brand.all(:limit => 50)
-    brands.each do |brand| %>
-      <a href='brand/<%= brand.id %>'><%=h brand.brand_name %></a>
+  <% brands = Brand.all(:limit => 50) 
+     brands.each do |brand| %>
+       <%= link_to brand.brand_name, brand %>
   <% end %>
-  <p><a href="#">全部品牌&gt;&gt;</a></p>
+  <p><%= link_to '全部品牌&gt;&gt;', :controller => 'brands' %></a></p>
 </div>
 
-<div class="block2 ui-corner-all">
-  诺基亚	摩托罗拉
-三星	索尼爱立信
-LG	飞利浦
-联想	海尔
-多普达	阿尔卡特
-天语	夏普
-酷派	金立
-iPhone	长虹
-步步高	中兴
-诚基	华为
-OPPO	夏新
-大显	TCL
-波导	CECT
-桑达	sins
-纽曼	奥克斯
-康佳	AOLE
-创维	万利达
-U9	朵唯
-GT佳通	UT斯达康
-魅族	OKWAP
-金鹏	琦基
+<div>
+  <img src="/images/main/all_prices.gif" alt="prices" />
 
-<p><a href="#">全部品牌&gt;&gt;</a></p>
 </div>
 <div class="block2 ui-corner-all">
-  客服: 0755-83998300
-  张三  {ic}QQ:123456789
-  李四 {ic}QQ:123456789
-  王麻子 {ic}QQ:123456789
+  <img src="/images/main/services.gif" alt="tel" />
+  <div class="contact">
+    <img class="user" src="/images/users/user001.jpeg" alt="user" />
+    <div class="info">
+      刘生
+      <img src="/images/main/qq.png" alt="QQ" /><br />
+      0755-83998366
+    </div>
+  </div>
+  <div class="contact">
+    <img src="/images/users/user001.jpeg" alt="user" />
+    <div>
+      刘生
+      <img src="/images/main/qq.png" alt="QQ" />
+      0755-83998366
+    </div>
+  </div>
+ <div class="contact">
+    <img src="/images/users/user001.jpeg" alt="user" />
+    <div>
+      刘生
+      <img src="/images/main/qq.png" alt="QQ" />
+      0755-83998366
+    </div>
+  </div>
+
 </div>
 <% if session[:user_role]=='admin' %>
   <br />

@@ -28,6 +28,10 @@ function centerwh(obj)
     //return wh;
 }
 
+function goto_mobile(mobileID){
+	location = "/mobiles/" + mobileID;
+}
+
 $(function(){
    $('.data_table')
     .attr("cellspacing","0")

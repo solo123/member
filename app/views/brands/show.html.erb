@@ -1,0 +1,50 @@
+
+<div>
+  Brand: <%=h @brand.brand_name %>
+</div>
+
+<div>
+  Search:<input type="text" size="30" />
+</div>
+
+<div>
+  <div>报价</div>
+  <div>图片</div>
+</div>
+
+<div>
+ <table class="data_table">
+    <caption>手机报价清单</caption>
+    <thead>
+      <tr>
+        <th class="nobg">手机报价</th>
+        <th>配置</th>
+        <th>描述</th>
+        <th>价格</th>
+        <th>报价</th>
+        <th>报价日期</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @mobiles.each do |mobile| %>
+      <tr>
+        <td><%=h mobile.name %></td>
+        <td><%=h mobile.part %></td>
+        <td><%=h mobile.remark %></td>
+        <td><%=h mobile.price %></td>
+        <td>*</td>
+        <td>*</td>
+        <td>
+          <div style="float:right;margin-right:4px;"  class="ui-state-default ui-corner-all" title="修改">
+            <%= link_to '查看', mobile, :class=>"ui-icon ui-icon-pencil" %>
+          </div>
+
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+</table>
+
+</div>

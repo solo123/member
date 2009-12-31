@@ -1,22 +1,37 @@
-
-<div id="main_content">
-  <%= render :partial => "mobile_recommand" %>
-  <div>
-    酷购推荐.促销方案
-  <%= render :partial => "mobile_photo_title" %>
-  </div>
-
-  <div>
-    配件.维修  <%= render :partial => "mobile_photo_title" %>
-  </div>
-
-
-  <div>
-    图片快速展示台
-  <%= render :partial => "mobile_photo_title" %>
-  </div>
+<div>
+  brand / model / <%= @mobile.name %>
 </div>
 
+<h2><%= @mobile.name %></h2>
+
+<div>
+  <div>
+    image
+  </div>
+  <div>
+    <div>
+      GPS, WM6, ...
+    </div>
+    <div>
+      配置:<%=h @mobile.part %><br />
+      说明:<%=h @mobile.remark %>
+    </div>
+    <div>
+      Price: <%= @mobile.price %>
+      
+    </div>
+    <div>
+      查看批发价
+    </div>
+  </div>
+
+  <div>
+    更多图片
+  </div>
+
+
+  <%= button_to "Add to Cart" ,:controller => 'store', :action => 'add_to_cart', :id => @mobile %>
+</div>
 
 <% content_for :right do %>
   <div class="block3">

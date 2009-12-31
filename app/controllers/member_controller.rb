@@ -1,5 +1,7 @@
 class MemberController < ApplicationController
   def index
+    @recommand_mobiles = Mobile.all(:limit => "10")
+    @cart = session[:cart] ||= Cart.new
   end
 
   def login

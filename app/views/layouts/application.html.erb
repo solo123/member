@@ -14,31 +14,37 @@
 <body>
 
   <div class="main">
-    <div class="container">
+  <div class="top_links"><a href="www.coolpur.com">Coolpur</a></div>
+    <div class="container ui-corner-all">
       <div class="header">
         <div class="logo">
-          <img src="images/main/coolpur_logo.gif" alt="CoolPur" />
+          <img src="/images/main/coolpur_title.png" alt="CoolPur" />
         </div>
 
         <div class="banner">
-          banner or stats here.
+          <img src="/images/main/coolpur_banner.jpg" height="90" alt="coolpur" />
+          <img src="/images/main/coolpur_banner.jpg" height="90" alt="coolpur" />
+          <img src="/images/main/coolpur_banner.jpg" height="90" alt="coolpur" />
         </div>
 
         <div class="menu ui-corner-top">
           <div class="menu_left ui-corner-tl">
             <div class="text_padding">
-              <a href="#">主菜单</a> 
+              <a href="/">酷购网</a> 
             </div>
           </div>
           <div class="text_padding">          
-          <a href="#">我的酷购</a> |
-          <a href="#">客户服务</a>
-        </div>
+            <a href="#">我的酷购</a> |
+            <a href="#">客户服务</a>
+          </div>
         </div>
 
         <div class="search ui-corner-bottom">
-          <input type="text" size="30" /> 
-          search box
+          <form id="form_search" >
+                <span class="left">搜索手机</span>
+                <input id="search_field" type="text" size="30" />
+                <input type="button" value="搜索" />
+            </form>
         </div>
       </div>
 
@@ -50,6 +56,10 @@
               <%= render :partial => "member/left_menu" %> 
             </td>
             <td valign="top">
+<% if flash[:notice] -%>
+  <div id="notice"><%= flash[:notice] %></div>
+<% end -%>
+
               <!-- middle zone -->
               <%= yield %>
             </td>
@@ -61,7 +71,13 @@
         </table>
       </div>
 
+      <div class="web_links"></div>
     </div>
+    <p class="page_foot">深圳市酷购科技开发有限公司 © 2008-2009<br />
+    地址： 中国.深圳 华强北路华联发大厦1118室<br />
+    电话： 86 0755 83998366,83998966<br />
+    传真： 86 0755 83998300<br />
+电子邮件：coolpur@163.com </p>
   </div>
 
 

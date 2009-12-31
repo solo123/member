@@ -1,0 +1,12 @@
+<p>
+  酷购推荐
+  </p>
+
+
+  <div class="div_brands">
+    <% @brands.each do |brand| %>
+      <%= link_to brand.brand_name,brand_path(brand), :class => "f" %>
+    <% end %>
+    <div class="clear"></div>
+  </div>
+
