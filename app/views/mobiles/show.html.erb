@@ -1,62 +1,45 @@
-<div>
-  brand / model / <%= @mobile.name %>
+<div id="main_content">
+
+  
+  <div class="mobile_title_zone ui-corner-all">
+    <div>
+      <%= link_to @brand.brand_name, @brand %> / <%= @mobile.model %>
+    </div>
+    
+    <h2><%= @mobile.name %></h2>
+
+    <div>
+      <div id="mobile_title_img">
+        <img src='' alt='<%= @mobile.name %>' />
+      </div>
+      <div id='mobile_brief'>
+        <div>
+          <!-- GPS, WM6, ... -->
+        </div>
+        <div>
+          配置:<%=h @mobile.part %><br />
+          说明:<%=h @mobile.remark %>
+        </div>
+        <div id="mobile_price">
+          零售价: <%= @mobile.price %><br />
+          批发价: <a href='javascript:void(0);' onclick='show_quotation(<%= @mobile.id %>)'>点击查看</a>
+          <br />
+          <input type='button' value='最新批发价' onclick='alert("ok");' />
+          <%= button_to "放入购物车" ,:controller => 'store', :action => 'add_to_cart', :id => @mobile %>          
+        </div>
+        <div id="quotation_dialog" title="最近10条报价">
+        </div>
+
+      </div>
+
+      <div id='mobile_photos'>
+      </div>
+
+    </div>
+  </div>
 </div>
 
-<h2><%= @mobile.name %></h2>
-
-<div>
-  <div>
-    image
-  </div>
-  <div>
-    <div>
-      GPS, WM6, ...
-    </div>
-    <div>
-      配置:<%=h @mobile.part %><br />
-      说明:<%=h @mobile.remark %>
-    </div>
-    <div>
-      Price: <%= @mobile.price %>
-      
-    </div>
-    <div>
-      查看批发价
-    </div>
-  </div>
-
-  <div>
-    更多图片
-  </div>
-
-
-  <%= button_to "Add to Cart" ,:controller => 'store', :action => 'add_to_cart', :id => @mobile %>
-</div>
-
-<% content_for :right do %>
-  <div class="block3">
-    <div class="cart_block">
-
-      <%= render(:partial => "store/cart" , :object => @cart) %>
-
-      {logo}购物车
-      <ul>
-        <li> 金立B988 3台 320.oo/台</li>
-        <li> 索爱特K80 2台 1200.00/台 </li>
-        <li> LG D900 1台 2100.00/台 </li>
-      </ul>
-      合计:6台，3620.00元
-    </div>
-
-    <div>
-      推广活动（整合购买）
-    </div>
-    <div>
-      新品
-    </div>
-    <div>
-      热销产品
-    </div>
-  </div>
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'mobiles' %>
+  <%= javascript_include_tag 'mobiles' %>
 <% end %>
-

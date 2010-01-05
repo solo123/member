@@ -14,5 +14,6 @@ class ApplicationController < ActionController::Base
       flash[:notice] = "Please log in"
       redirect_to :controller => 'member' , :action => 'login'
     end
+    @cart = session[:cart] ||= Cart.new
   end
 end

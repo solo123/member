@@ -1,5 +1,4 @@
-<h2>Your Pragmatic Cart</h2>
-<div class="cart-title">Your Cart</div>
+﻿<div class="cart-title">你的订单</div>
 <table>
   <% for item in @cart.items %>
     <tr>
@@ -14,4 +13,5 @@
   </tr>
 </table>
 
-<%= button_to 'Empty cart', :action => 'empty_cart' %>
+<%= button_to '清空购物车', :action => 'empty_cart' %>
+

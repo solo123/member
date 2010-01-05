@@ -1,0 +1,30 @@
+<div id="main_content">
+<% if @mobiles!=nil && @mobiles.length>0 %>
+  <table class="data_table">
+    <caption>请输入查询条件，表中显示符合条件的前200条记录。</caption>
+    <thead>
+      <tr>
+        <th class="nobg">手机报价</th>
+        <th>配置</th>
+        <th>描述</th>
+        <th>价格</th>
+        <th>报价</th>
+        <th>报价日期</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @mobiles.each do |mobile| %>
+      <tr onclick='goto_mobile(<%= mobile.id %>);'>
+        <td><%=h mobile.name %></td>
+        <td><%=h mobile.part %></td>
+        <td><%=h mobile.remark %></td>
+        <td><%=h mobile.price %></td>
+        <td>*</td>
+        <td>*</td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+</div>

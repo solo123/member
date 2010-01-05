@@ -1,14 +1,9 @@
 <div class="block1 ui-corner-all">
   <h2>Coolpur.com 酷购</h2>
   电话: 0755-83998300 
-
-  <br />&nbsp;<br />
-  <% if is_already_login? %>
-    会员:<%=h session[:member_id].to_s %><br />
-    <a href="member/logout">退出登录</a>
-  <% else %>
-    <a href="member/login">登录会员账户，<br />查询直供价格。</a>
-  <% end %>
+  <br />
+  会员:<%=h session[:member_id].to_s %><br />
+  <a href="member/logout">退出登录</a>
 </div>
 
 <div class="block2 ui-corner-all">
@@ -20,11 +15,11 @@
 </div>
 
 <div>
-  <img src="/images/main/all_prices.gif" alt="prices" />
-
+  <img src="/images/main/all_prices.gif" alt="prices" style="cursor:pointer;" onclick="location.href='/search';" />
 </div>
+
 <div class="block2 ui-corner-all">
-  <img src="/images/main/services.gif" alt="tel" />
+  <img src="/images/main/services.png" alt="tel" />
   <div class="contact">
     <img class="user" src="/images/users/user001.jpeg" alt="user" />
     <div class="info">
@@ -33,27 +28,5 @@
       0755-83998366
     </div>
   </div>
-  <div class="contact">
-    <img src="/images/users/user001.jpeg" alt="user" />
-    <div>
-      刘生
-      <img src="/images/main/qq.png" alt="QQ" />
-      0755-83998366
-    </div>
-  </div>
- <div class="contact">
-    <img src="/images/users/user001.jpeg" alt="user" />
-    <div>
-      刘生
-      <img src="/images/main/qq.png" alt="QQ" />
-      0755-83998366
-    </div>
-  </div>
-
 </div>
-<% if session[:user_role]=='admin' %>
-  <br />
-  <div class="ui-corner-all left_body_block">
-    [%= render(:partial => '/admin/admin_menu') %]
-  </div>
-<% end %>
+

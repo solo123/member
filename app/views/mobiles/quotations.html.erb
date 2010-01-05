@@ -1,0 +1,25 @@
+<div>
+  <table id="quotations_table" cellspacing="0" cellpadding="4" border="1">
+  <thead>
+    <tr>
+      <td>报价</td>
+      <td>日期</td>
+      <td>备注</td>
+    </tr>
+  </thead>
+  <tbody>
+  <% @quotations.each do |quotation| %>
+    <tr>
+      <td><%= quotation.quotation_price %></td>
+      <td><%= quotation.quotation_date.strftime("%Y-%m-%d %H:%M") %></td>
+      <td><%= quotation.remark %></td>
+    </tr>
+  <% end %>
+  </tbody>
+  </table>
+</div>
+
+<input type='button' value='查询最新报价' />
+<div class="info">
+点击“查询最新报价”按钮后，酷购业务人员将立即向手机生产厂家询价，获取到最新价格后更新该产品的报价并及时通过手机短信通知您。
+</div>

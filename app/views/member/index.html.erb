@@ -1,47 +1,8 @@
 
 <div id="main_content">
   <%= render :partial => "mobile_recommand" %>
-  <div>
-    酷购推荐.促销方案
-  <%= render :partial => "mobile_photo_title" %>
-  </div>
-
-  <div>
-    配件.维修  <%= render :partial => "mobile_photo_title" %>
-  </div>
-
-
-  <div>
-    图片快速展示台
-  <%= render :partial => "mobile_photo_title" %>
-  </div>
 </div>
 
 
-<% content_for :right do %>
-  <div class="block3">
-    <div class="cart_block">
 
-      <%= render(:partial => "store/cart" , :object => @cart) %>
-
-      {logo}购物车
-      <ul>
-        <li> 金立B988 3台 320.oo/台</li>
-        <li> 索爱特K80 2台 1200.00/台 </li>
-        <li> LG D900 1台 2100.00/台 </li>
-      </ul>
-      合计:6台，3620.00元
-    </div>
-
-    <div>
-      推广活动（整合购买）
-    </div>
-    <div>
-      新品
-    </div>
-    <div>
-      热销产品
-    </div>
-  </div>
-<% end %>
 

@@ -32,6 +32,7 @@ function goto_mobile(mobileID){
 	location = "/mobiles/" + mobileID;
 }
 
+var search_prompt = "请输入要查询的手机型号";
 $(function(){
    $('.data_table')
     .attr("cellspacing","0")
@@ -47,4 +48,22 @@ $(function(){
     .find('tr:odd').addClass("noalt");
    $('.data_table').wrap("<div class='data_table_container ui-corner-all'></div>");
    $('#main_zone').addClass("ui-corner-all");
+   
+   $('#search_field')
+    .focus(function(){
+      $('#form_search').addClass('focused').removeClass('prompt');
+      if ($.trim(this.value)==search_prompt){
+        this.value = "";
+      } else {
+        this.select();
+      }
+      })
+    .blur(function(){
+      $('#form_search').removeClass('focused');
+      if ($.trim(this.value)==''){
+        this.value = search_prompt;
+        $('#form_search').addClass('prompt')
+      }
+    })
+    .val(search_prompt);
 });

@@ -1,0 +1,31 @@
+#mobile_title_img {
+width:260px; height:200px; float:left;	border:double 4px #ddd; padding:4px; margin:4px;background-color:white;
+}
+
+#mobile_brief{
+float:left;	padding:4px; width:500px;margin-left:6px;
+}
+
+#mobile_photos {
+clear: both;padding:2px;
+}
+
+#mobile_price{
+margin-top:10px;
+	font-size:90%;
+	font-family: Arial, Helvetica, sans-serif;
+	border:solid 1px #ddd;
+	padding: 4px;
+	background-color:lightyellow;
+	float:left;
+}
+#quotation_dialog{
+font-size: 0.85em;font-family: Arial, Helvetica, sans-serif;
+}
+#quotations_table{
+	 border-collapse: collapse;
+}
+.info {
+	font-size:90%;
+	font-family: Arial, Helvetica, sans-serif;
+}
