@@ -1,0 +1,4 @@
+PassengerEnabled on
+RailsEnv development #or production
+PassengerAppRoot /home/coolpurc/myapps/coolpur/member
+RailsBaseURI /
