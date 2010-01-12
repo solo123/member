@@ -25,7 +25,6 @@
         <div class="banner">
           <img src="/images/main/coolpur_banner.jpg" height="90" alt="coolpur" />
           <img src="/images/main/coolpur_banner.jpg" height="90" alt="coolpur" />
-          <img src="/images/main/coolpur_banner.jpg" height="90" alt="coolpur" />
         </div>
 
         <div class="menu ui-corner-top">
@@ -41,9 +40,11 @@
         </div>
 
         <div class="search ui-corner-bottom">
-			<form id="form_search" class="prompt" action="/search">
+          <div>
+			     <form id="form_search" class="prompt" action="/search">
                 <input id="search_field" name="model" type="text" size="26" autocomplete="off" />
             </form>
+          </div>
         </div>
       </div>
     </div>
@@ -64,6 +65,7 @@
 
               <!-- middle zone -->
               <%= yield %>
+
             </td>
             <td valign="top" class="right-zone">
 			  <div class="block3 ui-corner-all">

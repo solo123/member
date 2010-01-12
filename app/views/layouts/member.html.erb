@@ -4,18 +4,9 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <title>Coolpur.com - <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'member', 'jquery_ui_css/redmond/jquery-ui-1.7.2.custom' %>
-  <%= javascript_include_tag 'jquery-1.3.2.min', 'jquery-ui-1.7.2.custom.min', 'jquery.form','jquery.validate.min','application' %>
+  <%= stylesheet_link_tag 'member', 'jquery_ui_css/redmond/jquery-ui-1.7.2.custom', 'login' %>
+  <%= javascript_include_tag 'jquery-1.3.2.min', 'jquery-ui-1.7.2.custom.min', 'jquery.form','jquery.validate.min','jquery.validate.extend','application', 'member' %>
   <%= yield :head %>
-<style type="text/css">
-  body { margin: 0; padding: 0; border: none; }
-  input {border:solid 1px #007072;font-size:120%;padding:2px;margin:2px;font-family:Arial,Verdana,Helvetica,sans-serif;}
-</style>
-<script type="text/javascript">
-    $(function() {
-      $("input[type='text']:first", document.forms[0]).focus();
-    });
-</script>
 </head>
 <body>
 
@@ -30,7 +21,6 @@
         <div class="banner">
           <img src="/images/main/coolpur_banner.jpg" height="90" alt="coolpur" />
           <img src="/images/main/coolpur_banner.jpg" height="90" alt="coolpur" />
-          <img src="/images/main/coolpur_banner.jpg" height="90" alt="coolpur" />
         </div>
         <div class="clear"></div>
       </div>
@@ -42,16 +32,13 @@
 <div class="content">
         <table width="100%" >
           <tr>
-            <td valign="top" width="100" >
-            </td>
-            <td valign="top" align="center" width="35%">
+            <td valign="top" align="center" width="60%">
               <!-- middle zone -->
               <div style="width:500px;margin:auto;text-align:left;">
                 <%= yield %>
               </div>
             </td>
-            <td width="24">&nbsp;</td>
-            <td valign="top" width="35%">
+            <td valign="top" width="40%">
       			  <div class="block3 ui-corner-all">
       			  <p>
       			   深圳市酷购科技发展有限公司是手机低价直供模式的缔造者和开拓者，公司秉承<b>“低价、快捷、诚信、服务”</b>的核心经营理念，

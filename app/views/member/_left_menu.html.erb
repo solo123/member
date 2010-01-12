@@ -6,7 +6,7 @@
   <a href="member/logout">退出登录</a>
 </div>
 
-<div class="block2 ui-corner-all">
+<div class="block2 labels ui-corner-all">
   <% brands = Brand.all(:limit => 50) 
      brands.each do |brand| %>
        <%= link_to brand.brand_name, brand %>

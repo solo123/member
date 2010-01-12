@@ -1,0 +1,24 @@
+<div>
+   <% form_tag 'reg2' do %>
+  <div class="ui-corner-all" style="border:solid 3px #216572;">
+    <div style="background-color:white;padding:10px;height:220px;color:#216572;">
+
+      <h1>新会员注册</h1>
+     
+      <p>
+        <label for="name">手机号：</label><br />
+        <%= text_field_tag :mobile, params[:mobile] %>
+      </p>
+    </div>  
+    <div style="height:100px; background-color:#2b6e81;padding:10px;">
+      <%= submit_tag "下一步 &gt;", :class => 'submit' %>
+      <div  style="margin-top:10px;">
+        <%= flash[:alert] %>
+        <% if flash[:notice] -%>
+          <%= flash[:notice] -%>
+        <% end -%>
+      </div>
+    </div>
+  </div>  
+<% end %>
+</div>

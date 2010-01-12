@@ -1,0 +1,9 @@
+body { margin: 0; padding: 0; border: none; }
+input {border:solid 1px #007072;font-size:120%;padding:2px;margin:2px;font-family:Arial,Verdana,Helvetica,sans-serif;}
+a.reg_link {color:white;}
+a.reg_link.visited {color:white;}
+a.reg_link:hover {color:red;}
+
+.error {color:red;}
+label.error {font-size:90%;}
+input.error {border:solid 1px red;}

@@ -15,21 +15,21 @@
         <th class="nobg">手机报价</th>
         <th>配置</th>
         <th>描述</th>
-        <th>价格</th>
+        <th>零售价</th>
         <th>报价</th>
-        <th>报价日期</th>
+        <th nowrap>报价日期</th>
       </tr>
     </thead>
 
     <tbody>
       <% @mobiles.each do |mobile| %>
       <tr onclick='goto_mobile(<%= mobile.id %>);'>
-        <td><%=h mobile.name %></td>
+        <td nowrap><%=h mobile.name %></td>
         <td><%=h mobile.part %></td>
         <td><%=h mobile.remark %></td>
-        <td><%=h mobile.price %></td>
-        <td>*</td>
-        <td>*</td>
+        <td align="right"><%=h mobile.price %></td>
+        <td align="center" nowrap>(查价)</td>
+        <td align="right">*</td>
       </tr>
       <% end %>
     </tbody>

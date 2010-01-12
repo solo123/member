@@ -1,0 +1,41 @@
+<div class="ui-corner-all" style="border:solid 3px #216572;">
+  <div style="background-color:white;padding:10px;height:220px;color:#216572;">
+
+  <h1>注册会员信息</h1>
+
+  <% form_for :member, @member, :url => 'reg3', :html => { :method => :post, :class => "edit_post", :id => "register_member" } do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :mobile, '手机号:' %><br />
+    <%= f.text_field :mobile, :readonly => 'true' %>
+  </p>
+  <p>
+    <%= f.label :name, '显示名称(系统中显示的帐户名称)' %><br />
+    <%= f.text_field :name, :class => 'required' %>
+  </p>
+  <p>
+    <%= f.label :company, '单位名称:' %><br />
+    <%= f.text_field :company, :class => 'required' %>
+  </p>
+  <p>
+    <%= f.label :email, "邮件地址" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :phone, '其他联系电话:' %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :qq, 'QQ号:' %><br />
+    <%= f.text_field :qq %>
+  </p>
+  </div>
+  <div style="height:100px; background-color:#2b6e81;padding:10px;">
+  <p>
+    <input type="button" value="&lt; 上一步" onclick="javascript:location.href='reg1'"  />  
+    <%= f.submit '提交申请' %>
+  </p>
+<% end %>
+  </div>
+</div>

@@ -1,4 +1,9 @@
 class MobilesController < ApplicationController
+
+  def index
+    @recommand_mobiles = Mobile.all(:limit => "10")
+  end
+
   def show
     @mobile = Mobile.find(params[:id])
     @brand = Brand.find(@mobile.brand_id)

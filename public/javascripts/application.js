@@ -35,7 +35,13 @@ function goto_mobile(mobileID){
 var search_prompt = "请输入要查询的手机型号";
 $(function(){
    $('.data_table')
-    .attr("cellspacing","0")
+    .attr({
+      cellSpacing:0,
+      cellPadding:4,
+      width: '100%',
+      border: 1,
+      borderColor: '#999999'
+    })
     .find('tr:gt(0)')
         .mouseover(function(){ $(this).addClass("over")})
         .mouseout(function(){ $(this).removeClass("over")})
@@ -47,6 +53,7 @@ $(function(){
     .find('tr:even:gt(0)').addClass("alt").end()
     .find('tr:odd').addClass("noalt");
    $('.data_table').wrap("<div class='data_table_container ui-corner-all'></div>");
+   
    $('#main_zone').addClass("ui-corner-all");
    
    $('#search_field')

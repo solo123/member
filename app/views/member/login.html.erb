@@ -14,6 +14,8 @@
         </div>
         <div style="height:100px; background-color:#2b6e81;padding:10px;">
           <%= submit_tag "登录" %>
+          &nbsp;&nbsp;
+          <%= link_to "注册新用户", {:action => "reg1"}, :class => "reg_link"  %>
           <div  style="margin-top:10px;">
             <%= flash[:alert] %>
             <% if flash[:notice] -%>
