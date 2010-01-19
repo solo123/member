@@ -1,0 +1,10 @@
+<div id='mobile_photos'>
+  <%
+  Dir['public/images/photos/#{@brand.brand_name}/#{@mobile.model}/*.jpg'].each do |file|
+  %>
+  
+  <img src='/images/photos/#{@brand.brand_name}/#{@mobile.model}/<%= File.basename file %>' />
+  <% end %>
+</div>
+
+

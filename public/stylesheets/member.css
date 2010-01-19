@@ -5,7 +5,7 @@
     Description:
         Purpose of the stylesheet follows.
 */
-body{line-height:1.5;font-size:1em;}
+body{line-height:1.5;font-size:1em;background-color:#161616; }
 .top_links{font-size:80%; width:95%; padding-right:10px;text-align:right;margin:auto;}
 .top_links a{color:white;text-decoration:none;}
 .top_links a.visited{color:white;}
@@ -26,7 +26,7 @@ body{line-height:1.5;font-size:1em;}
 .menu_left .text_padding a.visited{color:white;text-decoration:none;text-align:center;}
 .menu_left .text_padding a:hover{text-decoration:underline;}
 .content{}
-.search{clear:both;padding-left:20px;background-color:#b2cda6; height:32px;}
+.search{clear:both;padding-left:20px;background-color:#b2cda6; height:44px;}
 .search div {padding-top:10px;}
 #form_search{background:transparent url(/images/main/search_box.png) no-repeat scroll 0 -1px;padding-left:36px;height:25px;padding-top:3px;}
 #form_search.focused{background-position:left bottom;font-size:100%;color:black;}
@@ -54,7 +54,8 @@ body{line-height:1.5;font-size:1em;}
 .contact .user{float:left; border:solid 1px #ddd; padding:2px;}
 .contact .info{}
 .contact .info img{width:12px; height:12px;}
-/*#main_zone input{padding:2px;margin:4px 0 4px 0;font-family:Arial, Verdana, Helvetica, sans-serif;}
+/*
+#main_zone input{padding:2px;margin:4px 0 4px 0;font-family:Arial, Verdana, Helvetica, sans-serif;}
 #main_zone input[text]{border:solid 1px #216572;}
 #main_zone input.button{font-size:95%;}
 #main_zone select{margin:4px 0 4px 0;font-family:Arial, Verdana, Helvetica, sans-serif;}
@@ -71,7 +72,7 @@ body{line-height:1.5;font-size:1em;}
 #navigate_menu ul li a:visited{display:block;color:black;}
 #navigate_menu ul li a:hover{background-color:#ffffcc;}
 .upcase_input{text-transform:uppercase;}
-.mobile_title_zone{padding:4px;border:solid 1px #999;background:#73a883 url(/images/main/mastbox.gif) repeat-x}
+.mobile_title_zone{padding:4px;border:solid 1px #999;}
 .mobile_title_zone .title{font-size:110%; font-weight:bold; }
 .mobile_title_zone .content{}
 .mobile_title_zone .content .item{border:solid 1px transparent;padding:4px;margin:1px;float:left;cursor:pointer;}

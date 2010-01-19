@@ -1,6 +1,9 @@
-<div id="main_content">
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'mobiles' %>
+  <%= javascript_include_tag 'mobiles' %>
+<% end %>
 
-  
+<div id="main_content">
   <div class="mobile_title_zone ui-corner-all">
     <div>
       <%= link_to @brand.brand_name, @brand %> / <%= @mobile.model %>
@@ -8,38 +11,25 @@
     
     <h2><%= @mobile.name %></h2>
 
-    <div>
-      <div id="mobile_title_img">
-        <img src='' alt='<%= @mobile.name %>' />
-      </div>
-      <div id='mobile_brief'>
-        <div>
-          <!-- GPS, WM6, ... -->
-        </div>
-        <div>
-          配置:<%=h @mobile.part %><br />
-          说明:<%=h @mobile.remark %>
-        </div>
-        <div id="mobile_price">
-          零售价: <%= @mobile.price %><br />
-          批发价: <a href='javascript:void(0);' onclick='show_quotation(<%= @mobile.id %>)'>点击查看</a>
-          <br />
-          <input type='button' value='最新批发价' onclick='alert("ok");' />
-          <%= button_to "放入购物车" ,:controller => 'store', :action => 'add_to_cart', :id => @mobile %>          
-        </div>
-        <div id="quotation_dialog" title="最近10条报价">
-        </div>
-
-      </div>
-
-      <div id='mobile_photos'>
-      </div>
-
+    <img class="mobile_title" alt='<%= @mobile.name %>' />
+    <div class="mobile_function_icons">
+      <!-- GPS, WM6, ... -->
     </div>
+    <div class="mobile_brief">
+      说明:<%=h @mobile.part %> <%=h @mobile.remark %>
+    </div>
+    <div class="mobile_price">
+      零售价: <%= @mobile.price %> &nbsp;&nbsp;
+      直供价: <a href='javascript:void(0);' onclick='show_quotation(<%= @mobile.id %>)'>点击查看</a>
+      <br />
+      <input type='button' value='最新批发价' onclick='alert("ok");' /> &nbsp;
+      <%= button_to "放入购物车" ,:controller => 'store', :action => 'add_to_cart', :id => @mobile %>          
+    </div>
+    <div id="quotation_dialog" title="最近10条报价">
+    </div>
+
+    <%= render(:partial => "mobile_photos") %>
+
   </div>
 </div>
 
-<% content_for :head do %>
-  <%= stylesheet_link_tag 'mobiles' %>
-  <%= javascript_include_tag 'mobiles' %>
-<% end %>

@@ -8,4 +8,4 @@ doc/plugin
 doc/app
 vendor/rails
 db/schema.rb
-
+config/*.yml

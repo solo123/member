@@ -9,11 +9,6 @@ class MobilesController < ApplicationController
     @brand = Brand.find(@mobile.brand_id)
   end
   
-  def quotations
-    @quotations = Quotation.last_quotations(params[:id])
-    render :layout => false
-  end
-  
   def search
     model = params[:model]
     if model ==nil

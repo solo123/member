@@ -1,21 +1,22 @@
 <div>
   <% form_tag do %>
-
       <div class="ui-corner-all" style="border:solid 3px #216572;">
         <div style="background-color:white;padding:10px;height:220px;color:#216572;">
           <img src="/images/main/a_mobile.gif" width="100" height="140" style="float:right;margin-right:10px;margin-top:10px;" />
         <h3 style="">请登录 </h3>
             <label for="name">手机号：</label><br />
-            <%= text_field_tag :name, params[:name] %>
+            <%= text_field_tag :name, params[:name], :class => 'required mobile' %>
           <br /><br />
             <label for="password">登录密码：</label><br />
-            <%= password_field_tag :password, params[:password] %>
+            <%= password_field_tag :password, params[:password], :class => 'required' %>
           <br />
         </div>
         <div style="height:100px; background-color:#2b6e81;padding:10px;">
           <%= submit_tag "登录" %>
           &nbsp;&nbsp;
           <%= link_to "注册新用户", {:action => "reg1"}, :class => "reg_link"  %>
+          &nbsp;
+          <%= link_to "忘记密码？", {:action => "forgot"}, :class => "reg_link" %>
           <div  style="margin-top:10px;">
             <%= flash[:alert] %>
             <% if flash[:notice] -%>

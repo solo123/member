@@ -1,5 +1,5 @@
 function show_quotation(mobileID){
-  $.get("/mobiles/quotations/" + mobileID, function(data){
+  $.get("/quotations/" + mobileID, function(data){
     $("#quotation_dialog").html(data).dialog('open');
     alert(ui.mouse.postion);
   });
