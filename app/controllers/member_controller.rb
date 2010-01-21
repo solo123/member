@@ -85,7 +85,7 @@ class MemberController < ApplicationController
       else
         if member.email && member.email.length>6
           fp.send_by = "PSW.EMAIL" 
-          sms.Send_Email(member.id, params[:mobile], "您在酷购网申请的重置密码为:<b>#{pin}</b>，请登录<a href='' target='_blank'>www.coolpur.cn</a>修改您的登录密码。")
+          sms.Send_Email(member.id, params[:mobile],"密码重置申请", "您在酷购网申请的重置密码为:<b>#{pin}</b>，请登录<a href='' target='_blank'>www.coolpur.cn</a>修改您的登录密码。")
           sms.save!
           flash[:notice] = "您的密码已经通过邮件发送到您的注册邮箱#{member.email}"
         else
